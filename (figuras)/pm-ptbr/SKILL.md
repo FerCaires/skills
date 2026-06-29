@@ -62,18 +62,18 @@ Para **cada dimensão** do checklist:
 ```
 
 **Regras da entrevista:**
-- **Máximo de 15 perguntas** (teto, não piso). Pare antes se já não houver dúvida material.
+- **Sem limite de perguntas** — a entrevista é exaustiva. Continue até não houver mais dúvida material em nenhuma dimensão do checklist. Spec mal fechada vira retrabalho e ambiguidade na implementação.
 - **Uma pergunta por turno** (nunca lote). A resposta do usuário costuma abrir novas dimensões; perguntar em batch desperdiça contexto.
 - **Sempre ofereça uma `Resposta recomendada`** marcada com `(Recomendado)` como primeira opção, 2–3 alternativas depois, e a opção de o usuário redigir a própria.
 - **Vai de dentro para fora**: objetivo → persona/benefício → histórias → regras de negócio → integrações → fora-de-escopo → métricas → risco/rollback.
 - **Anote cada resposta** em rascunho mental; só persista na spec no fim da entrevista.
-- **Pare quando**: não houver mais dúvida material, ou você atingir 15 perguntas, ou o usuário disser "pode seguir".
+- **Pare quando**: não houver mais dúvida material em nenhuma dimensão do checklist, ou o usuário disser "pode seguir".
 - **Apresente um resumo** das decisões no fim da entrevista antes de gerar a spec.
 - **Não pergunte** o que já está coberto pelo `SDD.md`, `AGENTS.md`, ou features/docs existentes que você já leu.
 
 **Formato padrão de cada pergunta:**
 
-> **Pergunta N/15: [título curto]**
+> **Pergunta N: [título curto]**
 >
 > Contexto: [1–2 frases do porquê dessa pergunta]
 >
@@ -235,7 +235,7 @@ Quando a entrevista estiver fechada:
 
 1. Revise se todos os critérios de aceite são testáveis.
 2. Confirme que as dependências entre tarefas estão refletidas na coluna `Depende de` (no `tasks.md` da feature e no agregador).
-3. Se algo ainda estiver incerto, faça mais perguntas (até completar 15).
+3. Se algo ainda estiver incerto, faça mais perguntas até não houver mais dúvida material.
 4. **Solicite aprovação do usuário:**
    - Apresente um resumo claro: feature, quantidade de tarefas, ordem de execução, riscos principais.
    - Informe os caminhos: `docs/features/{NNN}-{name}/spec.md`, `docs/features/{NNN}-{name}/tasks.md` e `docs/tasks.md`.

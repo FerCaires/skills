@@ -1,6 +1,6 @@
 # Roteiro de Entrevista — Scaffold
 
-> Use este roteiro **uma dimensão por vez**. Leia a seção da dimensão atual, faça a primeira pergunta-cravada, espere a resposta, aplique o Framework de Clarificação e avance. Máximo 15 perguntas no total — pare antes se não houver mais dúvida material.
+> Use este roteiro **uma dimensão por vez**. Leia a seção da dimensão atual, faça a primeira pergunta-cravada, espere a resposta, aplique o Framework de Clarificação e avance. **Sem limite de perguntas** — a entrevista é exaustiva: continue até não houver mais dúvida material em nenhuma dimensão do checklist. O scaffold é a fundação do projeto; ambiguidade aqui vira débito permanente.
 
 ## Tabela de conteúdo
 

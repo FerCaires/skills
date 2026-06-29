@@ -18,6 +18,7 @@ conforme o agente alvo) do projeto de destino.
   - [Desenvolvimento — Frontend](#desenvolvimento--frontend)
   - [Testes](#testes)
   - [Starter (bootstrap de projeto)](#starter-bootstrap-de-projeto)
+  - [CI/CD](#cicd)
   - [Meta (autoria de skills)](#meta-autoria-de-skills)
 - [Fluxo recomendado entre skills](#fluxo-recomendado-entre-skills)
 - [Convenções do repositório](#convenções-do-repositório)
@@ -30,7 +31,9 @@ determinísticos) e `assets/` (templates/ícones). Os arquivos `(agentes)/*.md`
 são agentes no formato subagent (não skill com pasta), mas estão listados
 aqui por fazerem parte do catálogo.
 
-> **Total:** 19 skills/agentes catalogados.
+<!-- BEGIN TOTAL -->
+> **Total:** 22 skills/agentes catalogados.
+<!-- END TOTAL -->
 
 ## Categorias
 
@@ -104,6 +107,12 @@ Skills técnicas de implementação frontend. Vivem em `(develop)/(frontend)/`.
 |-------|-------|-------------|
 | **scaffold-ptbr** | `(starter)/scaffold-ptbr/` | Bootstrap completo de projeto novo: conduz entrevista estruturada (tipo/stack/DB/integrações/CI/testes/convenções), detecta via heurísticas e scaffolds `AGENTS.md`, `docs/workflow.md`, `README.md`, `.gitignore` e esqueleto de código mínimo; copia skills/agentes relevantes deste repo para `.devin/` do projeto alvo via `scripts/copy-skills.sh`. |
 
+### CI/CD
+
+| Skill | Pasta | Quando usar |
+|-------|-------|-------------|
+| **deploy-aws-serverless** | `(CI/CD)/deploy-aws-serverless/` | Configurar deploy serverless na AWS via GitHub Actions com OIDC, SAM, Lambda, DynamoDB, S3 e CloudFront. Use ao criar pipelines de deploy serverless, configurar OIDC para GitHub Actions, ou fazer deploy de Lambda + frontend estático. |
+
 ### Meta (autoria de skills)
 
 | Skill | Pasta | Quando usar |
@@ -147,13 +156,13 @@ Para jogos roguelike, o fluxo é paralelo:
 ## Convenções do repositório
 
 - Pastas de categoria usam parênteses: `(agentes)`, `(figuras)`,
-  `(documentacao)`, `(develop)`, `(testes)`, `(starter)`.
+  `(documentacao)`, `(develop)`, `(testes)`, `(starter)`, `(CI/CD)`.
 - Subpastas de skill contêm `SKILL.md` com frontmatter `name` + `description`.
 - Skills técnicas (backend/frontend) **exigem** `tdd-ptbr` carregada antes de
   escrever código.
-- Skills de persona (`pm-ptbr`, `tech-lead-ptbr`, `roguelike-gdd`) conduzem
-  entrevistas com no máximo 15 perguntas, uma por turno, sempre oferecendo
-  uma `Resposta recomendada`.
+- Skills de persona (`pm-ptbr`, `tech-lead-ptbr`, `roguelike-gdd`, `scaffold-ptbr`)
+  conduzem entrevistas exaustivas (sem limite de perguntas), uma por turno,
+  sempre oferecendo uma `Resposta recomendada`.
 - Toda skill deve seguir o padrão definido em `write-a-skill` (Quick Start,
   description < 1024 chars, SKILL.md < 500 linhas, references/ para conteúdo
   avançado).

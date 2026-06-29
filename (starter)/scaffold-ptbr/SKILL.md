@@ -64,7 +64,7 @@ Para **cada dimensão** do checklist:
 ```
 
 **Regras da entrevista:**
-- **Máximo de 15 perguntas** (teto, não piso). Pare antes se já não houver dúvida material.
+- **Sem limite de perguntas** — a entrevista é exaustiva. Continue até não houver mais dúvida material em nenhuma dimensão do checklist. O scaffold é a fundação do projeto; ambiguidade aqui vira débito permanente.
 - **Uma pergunta por turno** (nunca lote). A resposta do usuário costuma abrir novas dimensões.
 - **Sempre ofereça uma `Resposta recomendada`** marcada com `(Recomendado)` como primeira opção, 2–3 alternativas depois, e a opção de o usuário redigir a própria.
 - **Vai do tipo para o detalhe**: tipo → stack → DB → integrações → container → CI/testes → observabilidade → convenções → skills.
@@ -73,7 +73,7 @@ Para **cada dimensão** do checklist:
 
 **Formato padrão de cada pergunta:**
 
-> **Pergunta N/15: [título curto]**
+> **Pergunta N: [título curto]**
 >
 > Contexto: [1–2 frases do porquê dessa pergunta]
 >
