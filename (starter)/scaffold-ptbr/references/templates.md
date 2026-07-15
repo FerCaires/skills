@@ -79,7 +79,20 @@ O fluxo de trabalho está em **[`docs/workflow.md`](docs/workflow.md)**. Resumo:
 intake → pm → tech-lead → devs → qa → aprendizados
 ```
 
-Nenhuma feature é implementada sem spec aprovada e design aprovado.
+Nenhuma feature é implementada sem **spec aprovada pelo usuário** e **design aprovado pelo usuário**.
+
+### Gates de aprovação
+
+| Gate | Quem aprova | Artefato |
+|------|-------------|----------|
+| Spec | **usuário** | `docs/features/{NNN}-{name}/spec.md` |
+| Design | **usuário** | `docs/features/{NNN}-{name}/design.md` |
+
+O Tech Lead produz o design; o usuário valida ambos os gates explicitamente.
+
+### Execução paralela
+
+Features independentes (spec + design aprovados, sem dependência ou conflito de contrato) **devem** avançar em paralelo quando possível. Backend e frontend da mesma feature podem implementar em paralelo após design aprovado com contratos explícitos. Ver `docs/workflow.md` para critérios e marcação de dependências em `docs/tasks.md`.
 
 ## Convenções
 
@@ -93,10 +106,11 @@ Nenhuma feature é implementada sem spec aprovada e design aprovado.
 ## Regras de ouro
 
 1. **Leia `AGENTS.md` antes de agir.**
-2. **Siga o workflow** — nada de pular spec/design.
-3. **TDD obrigatório** em toda task de dev (skill `tdd-ptbr`).
-4. **Atualize `docs/tasks.md`** ao concluir etapa (PM/dev/QA).
-5. **Não commite secrets** — `.env` fora do git.
+2. **Siga o workflow** — spec **e** design aprovados pelo **usuário** antes de qualquer código.
+3. **Paralelize** features independentes sempre que possível (ver `docs/workflow.md`).
+4. **TDD obrigatório** em toda task de dev (skill `tdd-ptbr`).
+5. **Atualize `docs/tasks.md`** ao concluir etapa (PM/dev/QA).
+6. **Não commite secrets** — `.env` fora do git.
 ```
 
 ---
@@ -118,19 +132,18 @@ Nenhuma feature é implementada sem spec aprovada e design aprovado.
         │
         ▼
    pm-ptbr                ← entrevista de escopo → spec.md + tasks.md
-        │                   em docs/features/{NNN}-{name}/
+        │                   → **gate: aprovação do usuário**
         ▼
    tech-lead-ptbr         ← entrevista técnica → design.md
-        │                   (pular se lib/SDK)
-        ▼
-   ┌─────┴─────┐
-   ▼           ▼
- {dev-backend}  {dev-frontend}   ← cada um carrega tdd-ptbr + skill técnica
+        │                   → **gate: aprovação do usuário** (pular se lib/SDK)
+        ├──────────────────────────┐
+        ▼                          ▼
+ {dev-backend}  {dev-frontend}   ← paralelo por feature ou por camada (após design aprovado)
    │           │                  ({fastapi / postgresql / docker /
    │           │                   angular-material / frontend-design})
    └─────┬─────┘
         ▼
-   qa-ptbr + gherkin-e2e  ← validação contra spec + cenários BDD
+   qa-ptbr + gherkin-e2e  ← validação contra spec + cenários BDD (paralelo por feature)
         │
         ▼
    aprendizados           ← registrar lições para próximas features
@@ -152,11 +165,21 @@ intake-ptbr → dev (tdd-ptbr) → qa-ptbr → aprendizados
 
 | Gate | Quem aprova | Artefato |
 |------|-------------|----------|
-| Spec | usuário | `docs/features/{NNN}-{name}/spec.md` |
-| Design | Tech Lead | `docs/features/{NNN}-{name}/design.md` |
+| Spec | **usuário** | `docs/features/{NNN}-{name}/spec.md` |
+| Design | **usuário** | `docs/features/{NNN}-{name}/design.md` |
 | Implementação | QA | `docs/features/{NNN}-{name}/tasks.md` (status `validado`) |
 
-**Nenhum código é escrito antes dos dois primeiros gates** (exceto libs, que pulam o gate de design).
+**Nenhum código é escrito antes dos dois primeiros gates** (exceto libs, que pulam o gate de design). O Tech Lead elabora o design; o usuário aprova spec e design explicitamente.
+
+## Execução paralela
+
+Features **independentes** podem avançar em paralelo após spec **e** design aprovados pelo usuário:
+
+- **Features distintas:** implementação e QA em paralelo se não houver `depende_de` em `docs/tasks.md`.
+- **Mesma feature, camadas distintas:** backend + frontend em paralelo após design com contratos de API/modelo explícitos.
+- **Bloquear paralelismo** quando houver dependência não resolvida, overlap de arquivos ou gate pendente.
+
+PM marca dependências no agregador `docs/tasks.md` (`bloqueado`, `depende_de: {NNN}`).
 
 ## Estados
 

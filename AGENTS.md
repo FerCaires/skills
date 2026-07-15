@@ -60,7 +60,7 @@ Este script varre todas as categorias, compara com o `README.md` e reporta drift
 - Agentes são arquivos `.md` soltos em `(agentes)/`.
 - Toda skill deve seguir o padrão `write-a-skill` (Quick Start, description < 1024 chars, SKILL.md < 500 linhas, `references/` para conteúdo avançado).
 - Skills técnicas (backend/frontend) **exigem** `tdd-ptbr` carregada antes de escrever código.
-- Skills de persona conduzem entrevistas **sem limite de perguntas** (exaustivas), uma por turno, sempre oferecendo uma `Resposta recomendada`.
+- Skills de persona conduzem entrevistas **sem limite de perguntas** (exaustivas), uma por turno, sempre oferecendo uma `Resposta recomendada`. O `pm-ptbr` e o `tech-lead-ptbr` seguem o mesmo padrão de **entrevistador assíduo** do Game Design Director (`roguelike-gdd`).
 - Textos em **português brasileiro** quando aplicável (skills pt-BR).
 
 ## Categorias e ordem esperada no README
@@ -84,3 +84,4 @@ Este script varre todas as categorias, compara com o `README.md` e reporta drift
 | `scripts/scan-skills.sh` | Varre categorias, compara com README, reporta drift. Exit 0 = sync, 1 = drift. |
 | `scripts/scan-skills.sh --fix-total` | Corrige apenas o total no README (entre marcadores). Não toca nas tabelas. |
 | `(starter)/scaffold-ptbr/scripts/copy-skills.sh` | Copia skills/agentes deste repo para `.devin/` de outro projeto. |
+| `(starter)/setup-projeto-ptbr/scripts/copy-skills.sh` | Copia skills/agentes para `.cursor/` ou `.devin/` de outro projeto (layout configurável). |

@@ -20,8 +20,8 @@ Vivem em `(figuras)/`. Conduzem entrevistas estruturadas.
 
 | Skill | Caminho no repo | Quando usar |
 |-------|-----------------|-------------|
-| **pm-ptbr** | `(figuras)/pm-ptbr` | Planejar nova feature: entrevista de escopo, spec.md + tasks.md, agregador `docs/tasks.md`. |
-| **tech-lead-ptbr** | `(figuras)/tech-lead-ptbr` | Gerar design técnico (`design.md`) a partir de spec aprovada. |
+| **pm-ptbr** | `(figuras)/pm-ptbr` | Planejar nova feature: entrevista exaustiva (mesmo padrão do Game Design Director), spec.md + tasks.md, agregador `docs/tasks.md`. |
+| **tech-lead-ptbr** | `(figuras)/tech-lead-ptbr` | Design técnico: entrevista exaustiva (mesmo padrão do PM/Game Design Director), design.md, tasks.md. |
 | **roguelike-gdd** | `(figuras)/roguelike-gdd` | Game Designer para jogos roguelike: entrevista exaustiva, GDD, contratos de feature. |
 
 ## Documentação e Processo

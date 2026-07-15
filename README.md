@@ -32,7 +32,7 @@ são agentes no formato subagent (não skill com pasta), mas estão listados
 aqui por fazerem parte do catálogo.
 
 <!-- BEGIN TOTAL -->
-> **Total:** 22 skills/agentes catalogados.
+> **Total:** 23 skills/agentes catalogados.
 <!-- END TOTAL -->
 
 ## Categorias
@@ -55,8 +55,8 @@ artefatos de planejamento/design (spec, design, GDD). Vivem em `(figuras)/`.
 
 | Skill | Pasta | Quando usar |
 |-------|-------|-------------|
-| **pm-ptbr** | `(figuras)/pm-ptbr/` | Planejar nova feature: ler SDD, quebrar em tarefas atômicas, definir critérios de aceite, gerar `spec.md` e `tasks.md`, manter agregador `docs/tasks.md`. Conduz entrevista de escopo. |
-| **tech-lead-ptbr** | `(figuras)/tech-lead-ptbr/` | Gerar design técnico (`design.md`) a partir de spec aprovada: revisar arquitetura, coordenar integração entre serviços, definir contratos de API/modelagem. Conduz entrevista técnica. |
+| **pm-ptbr** | `(figuras)/pm-ptbr/` | Product Manager e entrevistador assíduo (mesmo padrão do Game Design Director): entrevista exaustiva dimensão a dimensão, critérios de aceite testáveis, `spec.md` + `tasks.md`, agregador `docs/tasks.md`. Não gera código. |
+| **tech-lead-ptbr** | `(figuras)/tech-lead-ptbr/` | Tech Lead e entrevistador assíduo (mesmo padrão do PM/Game Design Director): entrevista técnica exaustiva, `design.md`, revisão de tarefas/agents, agregador `docs/tasks.md`. Design aprovado pelo usuário. Não gera código. |
 | **roguelike-gdd** | `(figuras)/roguelike-gdd/` | Atuar como Game Designer Sênior para jogos roguelike: conduzir entrevista exaustiva (11 áreas), refinar o GDD, persistir em `docs/GDD.md` e fatiar em contratos de feature `docs/{NNN}-{name}/gdd.md`. Não gera código. |
 
 ### Documentação e Processo
@@ -106,6 +106,7 @@ Skills técnicas de implementação frontend. Vivem em `(develop)/(frontend)/`.
 | Skill | Pasta | Quando usar |
 |-------|-------|-------------|
 | **scaffold-ptbr** | `(starter)/scaffold-ptbr/` | Bootstrap completo de projeto novo: conduz entrevista estruturada (tipo/stack/DB/integrações/CI/testes/convenções), detecta via heurísticas e scaffolds `AGENTS.md`, `docs/workflow.md`, `README.md`, `.gitignore` e esqueleto de código mínimo; copia skills/agentes relevantes deste repo para `.devin/` do projeto alvo via `scripts/copy-skills.sh`. |
+| **setup-projeto-ptbr** | `(starter)/setup-projeto-ptbr/` | Configura projeto para IA: entrevista sobre finalidade e tipo, seleciona e copia skills/agentes para `.cursor/` (ou `.devin/`), gera `AGENTS.md` e `docs/workflow.md` com fluxo de trabalho. Foco em meta-configuração — sem scaffold de código. |
 
 ### CI/CD
 
@@ -160,9 +161,10 @@ Para jogos roguelike, o fluxo é paralelo:
 - Subpastas de skill contêm `SKILL.md` com frontmatter `name` + `description`.
 - Skills técnicas (backend/frontend) **exigem** `tdd-ptbr` carregada antes de
   escrever código.
-- Skills de persona (`pm-ptbr`, `tech-lead-ptbr`, `roguelike-gdd`, `scaffold-ptbr`)
+- Skills de persona (`pm-ptbr`, `tech-lead-ptbr`, `roguelike-gdd`, `scaffold-ptbr`, `setup-projeto-ptbr`)
   conduzem entrevistas exaustivas (sem limite de perguntas), uma por turno,
-  sempre oferecendo uma `Resposta recomendada`.
+  sempre oferecendo uma `Resposta recomendada`. O `pm-ptbr` e o `tech-lead-ptbr`
+  seguem o mesmo padrão de entrevistador assíduo do Game Design Director (`roguelike-gdd`).
 - Toda skill deve seguir o padrão definido em `write-a-skill` (Quick Start,
   description < 1024 chars, SKILL.md < 500 linhas, references/ para conteúdo
   avançado).
