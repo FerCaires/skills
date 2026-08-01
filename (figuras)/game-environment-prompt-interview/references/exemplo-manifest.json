@@ -1,0 +1,92 @@
+{
+  "asset_pack_name": "Dark Pirate Cave - Environment Tileset",
+  "author": "AI Generated",
+  "version": "1.0.0",
+  "grid_base_size": {
+    "width": 1000,
+    "height": 1000
+  },
+  "slice_format": "PNG",
+  "transparent_background": true,
+  "categories": [
+    {
+      "category_name": "Ground Tiles",
+      "type": "Seamless Tiles",
+      "items": [
+        { "id": "tile_stone_dark_01", "bounds": { "x": 25, "y": 70, "w": 80, "h": 140 } },
+        { "id": "tile_dirt_01", "bounds": { "x": 115, "y": 70, "w": 80, "h": 140 } },
+        { "id": "tile_stone_light_01", "bounds": { "x": 205, "y": 70, "w": 80, "h": 140 } },
+        { "id": "tile_cracked_earth_01", "bounds": { "x": 115, "y": 230, "w": 80, "h": 140 } },
+        { "id": "tile_cracked_earth_02", "bounds": { "x": 205, "y": 230, "w": 80, "h": 140 } },
+        { "id": "tile_water_edge_top", "bounds": { "x": 25, "y": 390, "w": 80, "h": 140 } },
+        { "id": "tile_water_edge_middle", "bounds": { "x": 25, "y": 550, "w": 80, "h": 140 } },
+        { "id": "tile_water_center", "bounds": { "x": 115, "y": 550, "w": 80, "h": 140 } },
+        { "id": "tile_water_edge_bottom", "bounds": { "x": 25, "y": 800, "w": 80, "h": 140 } }
+      ]
+    },
+    {
+      "category_name": "Rock Formations",
+      "type": "Modular Rocks",
+      "items": [
+        { "id": "stalactite_large_01", "bounds": { "x": 320, "y": 70, "w": 60, "h": 160 } },
+        { "id": "stalactite_large_02", "bounds": { "x": 400, "y": 70, "w": 55, "h": 160 } },
+        { "id": "stalactite_large_03", "bounds": { "x": 475, "y": 70, "w": 55, "h": 160 } },
+        { "id": "stalagmite_small_group", "bounds": { "x": 325, "y": 260, "w": 65, "h": 130 } },
+        { "id": "stalagmite_medium_01", "bounds": { "x": 405, "y": 240, "w": 55, "h": 150 } },
+        { "id": "stalagmite_medium_02", "bounds": { "x": 475, "y": 240, "w": 55, "h": 150 } },
+        { "id": "stalagmite_tall_01", "bounds": { "x": 325, "y": 480, "w": 65, "h": 130 } },
+        { "id": "stalagmite_tall_02", "bounds": { "x": 405, "y": 440, "w": 60, "h": 170 } },
+        { "id": "stalagmite_tall_03", "bounds": { "x": 475, "y": 430, "w": 60, "h": 180 } }
+      ]
+    },
+    {
+      "category_name": "Wooden Structures",
+      "type": "Prop / Platform",
+      "items": [
+        { "id": "wood_bridge_horizontal", "bounds": { "x": 560, "y": 65, "w": 145, "h": 160 } },
+        { "id": "wood_platform_small", "bounds": { "x": 560, "y": 240, "w": 65, "h": 110 } },
+        { "id": "wood_scaffolding_tower", "bounds": { "x": 715, "y": 70, "w": 80, "h": 260 } }
+      ]
+    },
+    {
+      "category_name": "Decorative Props",
+      "type": "Interactables & Objects",
+      "items": [
+        { "id": "chest_ornate_closed_01", "bounds": { "x": 815, "y": 80, "w": 75, "h": 110 } },
+        { "id": "chest_ornate_closed_02", "bounds": { "x": 900, "y": 80, "w": 75, "h": 110 } },
+        { "id": "chest_ornate_closed_03", "bounds": { "x": 560, "y": 430, "w": 65, "h": 100 } },
+        { "id": "chest_ornate_open", "bounds": { "x": 630, "y": 440, "w": 55, "h": 90 } },
+        { "id": "wood_barrel_single", "bounds": { "x": 815, "y": 220, "w": 38, "h": 85 } },
+        { "id": "wood_barrel_pair", "bounds": { "x": 635, "y": 250, "w": 75, "h": 100 } },
+        { "id": "wood_crate_01", "bounds": { "x": 860, "y": 215, "w": 50, "h": 90 } },
+        { "id": "wood_crate_02", "bounds": { "x": 915, "y": 215, "w": 50, "h": 90 } },
+        { "id": "wall_lantern_lit", "bounds": { "x": 695, "y": 430, "w": 40, "h": 90 } },
+        { "id": "standing_torch_lit", "bounds": { "x": 750, "y": 430, "w": 30, "h": 180 } },
+        { "id": "hanging_chains_set", "bounds": { "x": 815, "y": 410, "w": 155, "h": 140 } },
+        { "id": "scattered_bones_set", "bounds": { "x": 815, "y": 550, "w": 155, "h": 70 } }
+      ]
+    },
+    {
+      "category_name": "Cave Vegetation",
+      "type": "Environment Details",
+      "items": [
+        { "id": "moss_patch_flat", "bounds": { "x": 315, "y": 715, "w": 65, "h": 80 } },
+        { "id": "moss_patch_dense", "bounds": { "x": 390, "y": 725, "w": 60, "h": 75 } },
+        { "id": "glowing_mushrooms_cluster_01", "bounds": { "x": 460, "y": 715, "w": 50, "h": 85 } },
+        { "id": "glowing_mushrooms_cluster_02", "bounds": { "x": 515, "y": 710, "w": 45, "h": 90 } },
+        { "id": "tree_roots_small", "bounds": { "x": 570, "y": 700, "w": 65, "h": 110 } },
+        { "id": "tree_roots_large", "bounds": { "x": 640, "y": 695, "w": 70, "h": 120 } }
+      ]
+    },
+    {
+      "category_name": "Particle Effects",
+      "type": "VFX & Overlays",
+      "items": [
+        { "id": "dust_motes_sparks", "bounds": { "x": 750, "y": 705, "w": 40, "h": 80 } },
+        { "id": "torch_sparks_effect", "bounds": { "x": 820, "y": 700, "w": 60, "h": 120 } },
+        { "id": "spider_web_top_right", "bounds": { "x": 895, "y": 700, "w": 75, "h": 110 } },
+        { "id": "spider_web_bottom_right", "bounds": { "x": 895, "y": 820, "w": 75, "h": 110 } }
+      ]
+    }
+  ]
+}
